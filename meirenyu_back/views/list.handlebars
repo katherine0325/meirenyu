@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="./css/main.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） 
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<style>
+		.jiange{
+		height:50px;
+		}
+	</style>
+  </head>
+  <body>
+	<div class='container'>
+		<ul class='nav nav-tabs' style='margin:30px 0'>
+			<li class='active'><a href='/admin/gclist'>工程管理</a></li>
+			<li><a href='/admin/cllist'>材料管理</a></li>
+			<li><a href='/admin/yhlist'>用户管理</a></li>
+			<li><a href='/admin/ddlist'>订单管理</a></li>
+			<li><a href='/admin/lbtlist'>轮播管理</a></li>
+			<li><a href='/admin/adresslist'>地址管理</a></li>
+			<li><a href='/admin/lxrlist'>联系人管理</a></li>
+			<li><a href='/admin/jtlist'>静态资源管理</a></li>
+		</ul>
+		<div class='row gcgl'>
+			<table class='table table-hover table-bordered'>
+				<thead>
+					<tr>
+						<th>小说id</th>
+						<th>小说名称</th>
+						<th>小说封面地址</th>
+						<th>作者名字</th>
+						<th>简介</th>
+						<th>章节数量</th>
+						<th>章节地址title</th>
+						<th>修改</th>
+						<th>删除</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each novel}}
+						<tr class='item-id-{{_id}}'>
+							<td>{{_id}}</td>
+							<td>{{name}}</td>
+							<td><a href='{{pic}}' target='_blank'>{{pic}}</a></td>
+							<td>{{author}}</td>
+							<td style='overflow:hidden;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;'>{{introduction}}</td>
+							<td>{{chanum}}</td>
+							<td>{{chaptertitle}}</td>
+							<td><a href='/updatenovel/{{_id}}'>修改</a></td>
+							<td><button class='btn btn-danger del' type='button' data-id='{{_id}}'>删除</button></td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+			<div>
+				<a href='/input' class='btn btn-default' type='button'>新增小说</a>
+			</div>
+		</div>
+
+		
+	</div>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+
+	<script>
+	$(function(){
+		$('.del').click(function(e){
+			var target = $(e.target);
+			var id = target.data('id');
+			var tr = $('.item-id-' + id);
+
+			$.ajax({
+				type:'DELETE',
+				url:'/admin/deletenovel?id=' + id
+			})
+			.done(function(results){
+				if (results.success ===1)
+				{
+					if (tr.length>0)
+					{
+						tr.remove();
+					}
+				}
+			})
+			
+		})
+	})
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

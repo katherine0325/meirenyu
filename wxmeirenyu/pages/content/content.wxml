@@ -1,0 +1,7 @@
+<view class='root'>
+    <text class='text'>{{content}}</text>
+    <view class='button'>
+        <button bindtap="clickMenu" size='mini'>回到目录</button>
+        <button class='nextpage' size='mini' bindtap='clickNextpage' disabled='{{nextpagedisabled}}'>{{nextpage}}</button>
+    </view>
+</view>

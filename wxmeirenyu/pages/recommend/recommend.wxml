@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container root">
+<block wx:for="{{datas}}" wx:for-item="data" wx:key="*this1">
+  <!--单个item模板-->
+  <view class='book-root'>
+    <!--图书封面部分-->
+    <view class="book-img-root">
+      <image class="book-img-bg" src="../assets/img/bg01.jpg"></image>
+      <image class="book-img" src="{{data.pic}}" bindtap='clickBook' data-id='{{data._id}}'></image>
+    </view>
+    <!--图书标题-->
+    <view class="book-title">{{data.name}}</view>
+    <!--图书内容-->
+    <view class="book-content">{{data.introduction}}</view>
+  </view>
+</block>
+</view>

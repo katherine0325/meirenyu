@@ -1,0 +1,81 @@
+.book-basic{
+    display: flex;
+    flex-direction: row;
+}
+
+.book-basic-fm{
+    width: 220rpx;
+    height:280rpx;
+}
+
+.book-basic-detail{
+    font-family: Helvetica;
+    padding:20rpx 50rpx;
+}
+
+.book-basic-name{
+    font-size: 42rpx;
+    margin-bottom: 20rpx;
+}
+
+.book-basic-author{
+    font-size: 32rpx;
+    color: #7c7c7e;
+    margin-bottom: 30rpx;
+}
+
+.book-basic-fav{
+    background: #0e88eb;
+    color: #fff;
+}
+
+.book-basic-faved{
+    background-color: rgba(0, 0, 0, 0.1); 
+    opacity: 0.7;
+}
+
+.book-basic-ingcha{
+    margin-top: 20rpx;
+    color: #0e88eb;
+}
+
+.book-jj{
+    padding-top: 20rpx;
+}
+
+.book-jj-title{
+    border-bottom: solid 1rpx #ddd;
+    font-size: 36rpx;
+    line-height: 64rpx;
+}
+
+.book-jj-by{
+    display: inline-block;
+    width: 10rpx;
+    height: 36rpx;
+    border-radius: 5rpx;
+    background: #0e88eb;
+    margin-right: 20rpx;
+}
+
+.book-jj-content{
+    text-indent: 2em;
+    padding-top: 20rpx;
+    padding-bottom: 20rpx;
+}
+
+.book-chapters{
+    padding-top: 20rpx;
+}
+
+.book-chapter{
+    padding-top: 20rpx;
+}
+
+.book-chapter-button{
+    float: left;
+    font-size: 32rpx;
+    color: #7c7c7e;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+}

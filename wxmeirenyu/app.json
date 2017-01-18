@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/bookcase/bookcase",
+    "pages/recommend/recommend",
+    "pages/search/search",
+    "pages/bookpage/bookpage",
+    "pages/content/content",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0e88eb",
+    "navigationBarTitleText": "美人鱼小说",
+    "navigationBarTextStyle":"whilte"
+  },
+  "tabBar": {
+    "color":"#7c7c7c",
+    "selectedColor": "#0e88eb",
+    "borderStyle": "white",
+    "backgroundColor": "#f8f8f8",
+    "list": [{
+      "pagePath": "pages/bookcase/bookcase",
+      "text": "书架",
+      "iconPath": "pages/assets/img/bookcase2.png",
+      "selectedIconPath": "pages/assets/img/bookcase.png"
+    },
+    {
+      "pagePath": "pages/recommend/recommend",
+      "text": "推荐",
+      "iconPath": "pages/assets/img/recommend.png",
+      "selectedIconPath": "pages/assets/img/recommend2.png"
+    },
+    {
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath": "pages/assets/img/search.png",
+      "selectedIconPath": "pages/assets/img/search2.png"
+    }]
+  }
+}

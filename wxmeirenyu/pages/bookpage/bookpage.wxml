@@ -1,0 +1,35 @@
+<view class='root'>
+    <!--基本内容-->
+    <view class='book-basic'>
+        <!--封面-->
+        <view>
+            <image class='book-basic-fm' src="{{novel.pic}}"></image>
+            
+        </view>
+        <!--书名作者收藏-->
+        <view class='book-basic-detail'>
+            <!--书名-->
+            <view class='book-basic-name'>{{novel.name}}</view>
+            <!--作者名称-->
+            <view class='book-basic-author'>作者：{{novel.author}}</view>
+            <!--收藏按钮-->
+            <button class='{{favclass}}' size='mini' disabled='{{disabled}}' bindtap="clickFav" data-id='{{novel._id}}' data-name='{{novel.name}}' data-pic='{{novel.pic}}' data-chaptertitle='{{novel.chaptertitle}}'>{{fav}}</button>
+            <!--正在读到第几章-->
+            <view class='book-basic-ingcha font32' hidden='{{hidden}}' bindtap='clickGochapter' data-id='{{novel._id}}'>上次读到第{{ingchanum}}章,继续</view>
+        </view>
+    </view>
+    <!--简介-->
+    <view class='book-jj'>
+        <view class='book-jj-title'><font class='book-jj-by'></font>简介内容：</view>
+        <view class='book-jj-content font32'>{{novel.introduction}}</view>
+    </view>
+    <!--章节-->
+    <view class='book-chapters'>
+        <view class='book-jj-title'><font class='book-jj-by'></font>所有章节：</view>
+        <view class='book-chapter'>
+            <block wx:for='{{chapter}}' wx:for-item='chapter' wx:key='this2'>
+                <button class='book-chapter-button' bindtap='clickChapter' data-id='{{novel._id}}' data-chapter='{{chapter}}'>{{chapter}}</button>
+            </block>
+        </view>
+    </view>
+</view>

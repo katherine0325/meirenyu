@@ -1,0 +1,12 @@
+.root{
+  padding-top: 30rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  overflow-x: hidden;
+}
+
+.font32{
+  font-family: Helvetica;
+  font-size: 32rpx;
+  color: #7c7c7e;
+}

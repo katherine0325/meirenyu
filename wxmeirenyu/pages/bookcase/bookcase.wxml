@@ -1,0 +1,9 @@
+<button hidden='true' bindtap='clickClear'>清除缓存</button>
+<view class='container root'>
+<block wx:for='{{novel}}' wx:for-item='novel' wx:key='novel'>
+    <view class='book-single'>
+        <image class='book-fm' src="{{novel.pic}}" bindtap='clickBook' data-id='{{novel.id}}' data-ingchanum='{{novel.ingchanum}}'></image>
+        <view class='book-title'>{{novel.name}}</view>
+    </view>
+</block>
+</view>

@@ -1,0 +1,24 @@
+.text{
+    font-family: Helvetica;
+    font-size: 32rpx;
+    color: #7c7c7e;
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+    font-family: Helvetica;
+}
+
+.nextpage{
+    background: #0e88eb;
+    color: #fff;
+}
+
+.nextpage:hover{
+    background: #0658e0;
+    color: #ddd;
+}
+

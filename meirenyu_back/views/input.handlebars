@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="./css/main.css">
+	<link type="text/css" rel="stylesheet" href="./css/index.css">
+
+	<!-- 可选的Bootstrap主题文件（一般不用引入） 
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+	<div class='container'>
+		<h2>{{title}}</h2>
+		<div class='row'>
+			<form class='form-horizontal' method='post' action='/admin/addnovel'>
+				<input type='hidden' name='novel[_id]' value='{{novel._id}}'>
+				<div class='form-group'>
+					<label class='col-sm-2 control-label' for='inputTitle'>小说名称</label>
+					<div class='col-sm-10'>
+						<input id='inputTitle' class='form-control' type='text' name='novel[name]' value='{{novel.name}}'>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='col-sm-2 control-label' for='inputPic'>小说封面地址</label>
+					<div class='col-sm-10'>
+						<input id='inputPic' class='form-control' type='text' name='novel[pic]' value='{{novel.pic}}'>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='col-sm-2 control-label' for='inputPrice'>作者名字</label>
+					<div class='col-sm-10'>
+						<input id='inputPrice' class='form-control' type='text' name='novel[author]' value='{{novel.author}}'>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='col-sm-2 control-label' for='inputSuportnum'>简介</label>
+					<div class='col-sm-10'>
+						<textarea id='inputSuportnum' class='form-control' type='text' name='novel[introduction]'>{{novel.introduction}}</textarea>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='col-sm-2 control-label' for='inputSuportnum'>章节数量</label>
+					<div class='col-sm-10'>
+						<input id='inputSuportnum' class='form-control' type='text' name='novel[chanum]' value='{{novel.chanum}}'>
+					</div>
+				</div>
+				<div class='form-group'>
+					<label class='col-sm-2 control-label' for='inputSuportnum'>章节地址title</label>
+					<div class='col-sm-10'>
+						<input id='inputSuportnum' class='form-control' type='text' name='novel[chaptertitle]' value='{{novel.chaptertitle}}'>
+					</div>
+				</div>
+				<div class='form-group'>
+					<div class='col-sm-offset-2 col-sm-10'>
+						<button class='btn btn-default' type='submit'>保存</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+
+	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+

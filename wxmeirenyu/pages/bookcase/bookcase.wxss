@@ -1,0 +1,24 @@
+.container{
+
+}
+
+.book-single{
+    float: left;
+    margin-left:10rpx;
+    margin-right:10rpx;
+    margin-bottom: 20rpx;
+    width: 30%;
+}
+
+.book-fm{
+    width: 100%;
+    height: 280rpx;
+}
+
+.book-title{
+    text-align: center;
+    font-family: Helvetica;
+    font-size: 36rpx;
+    line-height: 56rpx;
+    color: #7c7c7e;
+}
